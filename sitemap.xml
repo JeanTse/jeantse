@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hcy.asia/jeantse/minigame/</loc>
+    
+    <lastmod>2020-07-21T03:24:34.049Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hcy.asia/jeantse/learn-hexo/</loc>
+    
+    <lastmod>2020-07-21T03:24:08.147Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hcy.asia/jeantse/liuye-why/</loc>
     
     <lastmod>2020-07-16T06:52:47.917Z</lastmod>
@@ -656,13 +670,6 @@
     <loc>http://hcy.asia/jeantse/mby/</loc>
     
     <lastmod>2020-06-11T13:41:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hcy.asia/jeantse/minigame/</loc>
-    
-    <lastmod>2020-06-11T13:41:09.000Z</lastmod>
     
   </url>
   
