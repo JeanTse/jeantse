@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hcy.asia/jeantse/minigame/</loc>
+    <loc>http://hcy.asia/jeantse/human-wenming/</loc>
     
-    <lastmod>2020-07-21T03:24:34.049Z</lastmod>
+    <lastmod>2020-07-23T02:53:47.402Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://hcy.asia/jeantse/learn-hexo/</loc>
     
-    <lastmod>2020-07-21T03:24:08.147Z</lastmod>
+    <lastmod>2020-07-21T05:26:01.964Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hcy.asia/jeantse/minigame/</loc>
+    
+    <lastmod>2020-07-21T03:24:34.049Z</lastmod>
     
   </url>
   
