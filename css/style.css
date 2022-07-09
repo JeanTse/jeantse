@@ -1046,21 +1046,10 @@ div.article-meta-button a:hover {
   position: static;
   font-family: Georgia, "Times New Roman", "Microsoft Yahei", serif;
   font-size: 1.1em;
-  margin: 0 -20px;
-  padding: 10px 20px 10px 54px;
+  margin: 0 5px;
+  padding: 0px 15px 0px 15px;
   background: #fcfcfc;
-  border-left: 4px solid #ffeaea;
-}
-.article-entry blockquote:before {
-  top: 20px;
-  left: -40px;
-  float: left;
-  content: "\f10d";
-  color: #ffeaea;
-  font-size: 32px;
-  font-family: FontAwesome;
-  text-align: center;
-  position: relative;
+  border: 3px solid #ffeaea;
 }
 .article-entry blockquote footer {
   font-size: 14px;
