@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>【科学组】线性规划 | JeanTse的个人博客</title>
+    
+    
+        <meta name="keywords" content="漫威,正经写完的文,翻译,科学组" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Linear Optimisation线性规划作者：notbeloved07原文：http:&#x2F;&#x2F;archiveofourown.org&#x2F;works&#x2F;1198254 Summary：消磨时光、事后温存、以及天马行空的地球征服计划。 Notes：很早以前我就已经写出了本文的大体脉络，但感觉太暗黑了。最近我又看到一个要求暗黑Tony的脑洞，希望他活力四射、冲动浮夸且鲁莽不羁，于是想起来这篇很吻合，就决定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【科学组】线性规划">
+<meta property="og:url" content="https://jeantse.net/marvel-scibro-Linear/">
+<meta property="og:site_name" content="JeanTse的个人博客">
+<meta property="og:description" content="Linear Optimisation线性规划作者：notbeloved07原文：http:&#x2F;&#x2F;archiveofourown.org&#x2F;works&#x2F;1198254 Summary：消磨时光、事后温存、以及天马行空的地球征服计划。 Notes：很早以前我就已经写出了本文的大体脉络，但感觉太暗黑了。最近我又看到一个要求暗黑Tony的脑洞，希望他活力四射、冲动浮夸且鲁莽不羁，于是想起来这篇很吻合，就决定">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-10T11:39:05.000Z">
+<meta property="article:modified_time" content="2020-06-10T11:39:05.000Z">
+<meta property="article:author" content="JeanTse">
+<meta property="article:tag" content="漫威">
+<meta property="article:tag" content="正经写完的文">
+<meta property="article:tag" content="翻译">
+<meta property="article:tag" content="科学组">
+<meta name="twitter:card" content="summary">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/jt.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">JeanTse的个人博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/cate">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/timeline">归档</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar-hyde.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入搜索词" />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/cate">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/timeline">归档</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar-hyde.jpg" />
+            <h2 id="name">JeanTse</h2>
+            <h3 id="title"></h3>
+            
+            <a id="follow" target="_blank" href="mailto:jeantse@yeah.net">email to me</a>
+        </div>
+        <div class="article-info profile-block ">
+            <div class="article-info-block">
+                   <span>推荐链接</span>
+            </div>
+        </div>
+        
+        
+    <div class="profile-block social-links">
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://space.bilibili.com/783801">bilibili</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://jeantse.lofter.com/">LOFTER</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://archiveofourown.org/users/JeanTse">AO3</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://xbd.jeantse.net/">花甲学诗记</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://hcy.asia">華晨宇・非公式資料サイト</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+        
+        
+    </div>
+</aside>
+
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₁ 追星
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            hyde
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/hyde-fanletter/">【hyde】2018.5.黑弥撒，情书。</a></li>  <li class="file"><a href="/hyde-201810jp/">【hyde】2018 hyde live repo</a></li>  <li class="file"><a href="/dream-2017-hyde/">【梦】2017.1.8 梦见Hyde及其全家</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            华晨宇
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/learn-videocut/">【学习】视频剪辑作业纪录</a></li>  <li class="file"><a href="/singer2020anti/">对《歌手：当打之年》开播后的职黑攻击的分析</a></li>  <li class="file"><a href="/hua-2018hunanlive/">2018湖南卫视元宵晚会舞美赞叹</a></li>  <li class="file"><a href="/hua-live-qingdao/">青岛凤凰音乐节历劫</a></li>  <li class="file"><a href="/hua-mrzz-hz/">花花在明日之子中对赫兹的态度分析</a></li>  <li class="file"><a href="/hua-myguide/">我找到了自己的专属向导</a></li>  <li class="file"><a href="/hua-shuixian/">【水仙】穿越至平行世界看自己的演唱会</a></li>  <li class="file"><a href="/hua-vranli/">给视觉系审美倾向者的华晨宇安利</a></li>  <li class="file"><a href="/singercd128kb/">分析湖南卫视制作歌手纪念CD用128k mp3做音源的迷操作内情</a></li>  <li class="file"><a href="/hua-loveworld/">《与火星的孩子对话》</a></li>  <li class="file"><a href="/hua-split-20191117/">绝响 - 《七重人格》海口首唱</a></li>  <li class="file"><a href="/hua-timeline/">鸟巢宣传视频创意</a></li>  <li class="file"><a href="/hua-shuixian-kegewanzong/">【水仙】对壳哥和丸总的脑补</a></li>  <li class="file"><a href="/hua-fakemonk/">《假行僧》 - 歌手2018</a></li>  <li class="file"><a href="/hua-huawei/">“花花听指挥！”</a></li>  <li class="file"><a href="/hua-shanhai/">《山海》 - 歌手2018</a></li>  <li class="file"><a href="/hua-toyaoshi/">刚认识花的第一天向yaoshi发泄</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            卷西
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/1111/">俩偶像儿子的拉郎</a></li>  <li class="file"><a href="/jesse-ifabook/">【卷西】假如卷老师是一本书，我的书评。</a></li>  <li class="file"><a href="/jessetransinterview/">【坑了】Vivarium访谈2020.4.2</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            墙头们
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/liuye-why/">【刘也】真香。</a></li>  <li class="file"><a href="/chaoyinzhanji/">潮音战纪</a></li>  <li class="file"><a href="/denglun-truefriend/">【邓伦】我的真朋友（无女主版）</a></li>  <li class="file"><a href="/shasiruai/">【蛋妞】《杀死汝爱》观后感</a></li>  <li class="file"><a href="/tobey3pyy/">【托比】托兰李三人角色拉郎YY</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            肖宇梁
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/moon-eva/">【肖宇梁 绫波丽】二(.5)次元天花板的相似性</a></li>  <li class="file"><a href="/moon-kitty/">【肖宇梁】《Kitty Kitty doesn't like ...》个人向混剪</a></li>  <li class="file"><a href="/dmbj-px-huaqing/">【瓶邪】《画情》无剧情混剪</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            闲得蛋痛
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/donttobepaparazzi/">RPS嗑学家：别让自己堕落成狗仔和私生</a></li>  <li class="file"><a href="/idolcareer/">为“偶像”职业正名</a></li>  <li class="file"><a href="/antireborn/">娱乐圈反重生文</a></li>  <li class="file"><a href="/mby/">论：明日之子毛不易是心机boy</a></li>  <li class="file"><a href="/nisu/">我为什么不反对泥塑</a></li>  <li class="file"><a href="/idoltime/">【坑了】流量经济下厂商与明星代言的博弈</a></li>  <li class="file"><a href="/chinaentertament/">对大陆娱乐圈现状的一些思考</a></li>  <li class="file"><a href="/idolcm/">对于明星代言的一些思考</a></li>  <li class="file"><a href="/tvbuy/">电视购物VS直播卖货</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            ₂ fiction
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            世界观
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/human-wenming/">人类文明，从个体文明至集群文明的跃迁？</a></li>  <li class="file"><a href="/original-zhongquan/">【坑】【大纲文】忠犬剧情YY</a></li>  <li class="file"><a href="/abo-2set/">【ABO】二设</a></li>  <li class="file"><a href="/aboantixy/">ABO世界观下的作者-读者对XY世界观的吐槽帖</a></li>  <li class="file"><a href="/abo-greenau/">【ABO】绿教AU</a></li>  <li class="file"><a href="/blavggameyy/">BL AVG 游戏大纲</a></li>  <li class="file"><a href="/chuzhongnaodong/">【初中时的脑洞】植物外星兄弟梗</a></li>  <li class="file"><a href="/humangene/">对于人类修饰基因组</a></li>  <li class="file"><a href="/xian-bl-yy/">修真文灵感，冰山冷漠攻，精英忠犬受</a></li>  <li class="file"><a href="/xian-nowoman-0/">男女生殖隔离的修仙设定－前传</a></li>  <li class="file"><a href="/xian-nowoman-1/">男女生殖隔离的修仙设定</a></li>  <li class="file"><a href="/xian-scigene/">关于修真和基因科技人类进化的设定</a></li>  <li class="file"><a href="/xianren-xiandai/">仙人眼中的现代世界</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            梦
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/dream-blgame/">【梦】BL+网游战斗剧情的梦？？</a></li>  <li class="file"><a href="/dream-shuqi/">【梦】一个新人漫画家在梦里与动漫角色NPC谈恋爱，回到现实世界结果扮演者是刚出道的舒淇，继续谈恋爱的故事？</a></li>  <li class="file"><a href="/dream-bro/">【梦】伪兄弟的梦！</a></li>  <li class="file"><a href="/dreamsweetbl/">【梦】有点忧伤但又甜蜜的BL文的梦</a></li>  <li class="file"><a href="/dream20190316/">【梦】2019.3.16</a></li>  <li class="file"><a href="/dream20190809/">【梦】2018.8.9</a></li>  <li class="file"><a href="/dream-dw/">【梦】2017.5.14 有点像DW的梦</a></li>  <li class="file"><a href="/jessespringdream/">【梦】2016.8.27 卷，春梦</a></li>  <li class="file"><a href="/dream-20150307/">【梦】2015.3.7</a></li>  <li class="file"><a href="/dream-201451-ABO/">【梦】 ABO背景，游戏相关</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            段子
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/darkhistory/">因果武器——黑历史消除器</a></li>  <li class="file"><a href="/3songs/">三首歌混搭毫无违和。</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            翻译
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/marvel-scibro-Linear/">【科学组】线性规划</a></li>  <li class="file"><a href="/marvel-scibro-children/">【科学组】我们的“孩子”/Our "Kids"</a></li>  <li class="file"><a href="/marvel-scibro-nostop/">【科学组】No Force in the Universe Can Stop Me</a></li>  <li class="file"><a href="/marvel-fangshezu1/">【放射组1】我们可能有放射性</a></li>  <li class="file"><a href="/marvel-scibro-lunwen/">【科学组】用于测量反向配对状态诱导下的构型转变的生物测定工具</a></li>  <li class="file"><a href="/marvel-fangshezu2/">【放射组2】让我们在黑暗中发光吧/Let's Glow in the Dark</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            跟风
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/384-liewangzhuan/">《列王传》假如，从一开始男主就是Gay会怎么样。</a></li>  <li class="file"><a href="/quanzhi-lian-bg/">以《连》为模板的BG恋爱设定</a></li>  <li class="file"><a href="/quanzhi-lunhui/">【轮回】方明华重生梗</a></li>  <li class="file"><a href="/quanzhi-xiaoxiang-admilk/">【肖翔】《AD钙奶》番外-孙翔的一天</a></li>  <li class="file"><a href="/quanzhi-xiaoxiang-bbs/">【肖翔】论坛体</a></li>  <li class="file"><a href="/quanzhi-xiaoxiang-yehao/">【叶皓联文】光源番外-肖时钦x孙翔</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-1/">【叶皓联文】番外-兴欣黑记者稿件</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-2/">【叶皓联文】光源番外 粉丝论坛罗生门</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-3/">【叶皓联文】ABO刘皓穿越原著世界</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-4/">【叶皓联文】[树洞]起点反派炮灰突然变成我嫂子怎么办…</a></li>  <li class="file"><a href="/quanzhi-yehao-beloved/">【叶皓联文】《被爱妄想症》</a></li>  <li class="file"><a href="/yy-fudai/">【伏黛】做了一个自由度很高的背景设定</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₃ zqsg
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Marvel
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/fangshezu-tobey/">【放射组】托比蛛X博士的CP设定</a></li>  <li class="file"><a href="/marvel-HowardBucky/">【霍冬】片段联想</a></li>  <li class="file"><a href="/marvel-brucehulk/">【博士】Bruce-Hulk的理解</a></li>  <li class="file"><a href="/marvel-fangshezu2-yy/">【放射组2】剧透</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            TSN
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/jesse-bro-DanielxMike/">【卷西四兄弟】Daniel×Mike</a></li>  <li class="file"><a href="/jesse-bro-nolex/">【卷西四兄弟】(杰西BRO不带Lex玩)家族设定</a></li>  <li class="file"><a href="/jesse-nysm-hair/">【NYSM2】Atlas的发型</a></li>  <li class="file"><a href="/jewnicorn/">【TSN】【jewnicorn】莱总汤米拉郎</a></li>  <li class="file"><a href="/tsn-100qa/">【TSN】jewnicorn CP一百问</a></li>  <li class="file"><a href="/tsn-antism/">【TSN】【EM】反SM设定(梦)</a></li>  <li class="file"><a href="/tsn-bvs/">【TSN】莱总表示：我有特殊的拆CP技巧？</a></li>  <li class="file"><a href="/tsn-huastrong/">【TSN】花朵变强脑洞</a></li>  <li class="file"><a href="/tsn-change/">【TSN】花朵马总立场逆转设定</a></li>  <li class="file"><a href="/tsn-king/">【TSN】ME帝后比喻</a></li>  <li class="file"><a href="/tsn-lovenotfight/">【TSN】爱情不是博弈</a></li>  <li class="file"><a href="/tsn-lovetrade/">【TSN】爱情买卖-反同人脑洞</a></li>  <li class="file"><a href="/tsn-mark-reborn/">【TSN】Mark重生的大纲文</a></li>  <li class="file"><a href="/tsn-marryAU-mark/">【TSN】求婚大作战AU，Mark番外</a></li>  <li class="file"><a href="/tsn-read/">【TSN】剧本阅读设定</a></li>  <li class="file"><a href="/tsn-marryAU/">【TSN】求婚大作战AU，正文</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            全职高手
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/quanzhi-abo-1.0/">【伞修】ABO设定及大纲段子文 Version 1.0</a></li>  <li class="file"><a href="/quanhi-san/">【伞修】伞哥身世剖析</a></li>  <li class="file"><a href="/quanzhi-ending-lanhe/">【叶蓝】结局之后关于蓝河的种种想法</a></li>  <li class="file"><a href="/quanzhi-abo-2/">【伞修】全职ABO设定衍生的世界观补充</a></li>  <li class="file"><a href="/quanzhi-jiashi8diandangyy/">【伞修】嘉世八点档YY聊天记录（逆序）</a></li>  <li class="file"><a href="/quanzhi-qingming/">【伞修】清明节的玩笑</a></li>  <li class="file"><a href="/quanzhi-sanabofromxy/">【伞修】从男女世界穿越到ABO世界的伞哥…</a></li>  <li class="file"><a href="/quanzhi-sanxiu-heaven/">【伞修】伞哥死后执念建立虚构世界叶修少年养成计划梗</a></li>  <li class="file"><a href="/quanzhi-sanxiuyy/">【伞修】思路整理</a></li>  <li class="file"><a href="/quanzhi-yelan/">【叶蓝】架空设定大纲</a></li>  <li class="file"><a href="/quanzhi-yehao-shaoxiang-1/">【叶皓联文】【哨兵向导】叶皓-伞修-伞周</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            新平柯
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/conan-hattori/">【新平柯】服部少年のBL恋爱事件簿——原著纯粹解析论文</a></li>  <li class="file"><a href="/yy-conan/">【新平柯】设定和想法</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            毛骗
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/maopian-abo/">【毛骗】【庄宝】ABO设定</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₄ 技术宅
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/learn-hexo/">【安利】自建免费blog（安全仓库）</a></li>  <li class="file"><a href="/digitalmusic/">国内数字音乐主流音质考察</a></li>  <li class="file"><a href="/minigame/">各类益智小游戏推荐</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₅ 生存确认
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/yiyuzheng/">漫谈抑郁症</a></li>  <li class="file"><a href="/quanzhifight/">反驳对全职的diss</a></li>  <li class="file"><a href="/earthonline/">可怜之人必有可恨之处。</a></li>  <li class="file"><a href="/replyAki/">给Aki的回信</a></li>  <li class="file"><a href="/jeantse/">名为JeanTse的人类</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/about/">关于本站</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-marvel-scibro-Linear" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                    <div class="article-meta">
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/end/" rel="tag">正经写完的文</a>, <a class="tag-link-link" href="/tags/marvel/" rel="tag">漫威</a>, <a class="tag-link-link" href="/tags/scibro/" rel="tag">科学组</a>, <a class="tag-link-link" href="/tags/trans/" rel="tag">翻译</a>
+    </div>
+
+                        
+                           <div class="article-meta3">
+                            点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
+                           </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            【科学组】线性规划
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>Linear Optimisation<br>线性规划<br>作者：notbeloved07<br>原文：<a target="_blank" rel="noopener" href="http://archiveofourown.org/works/1198254">http://archiveofourown.org/works/1198254</a></p>
+<p>Summary：<br>消磨时光、事后温存、以及天马行空的地球征服计划。</p>
+<p>Notes：<br>很早以前我就已经写出了本文的大体脉络，但感觉太暗黑了。最近我又看到一个要求暗黑Tony的脑洞，希望他活力四射、冲动浮夸且鲁莽不羁，于是想起来这篇很吻合，就决定在精修之后贴出来了。<br> <span id="more"></span></p>
+<hr>
+<p>对于爬上Tony的床之后可能发生的事情，Bruce曾有过各种设想，但拥抱绝不属于其中之一。Bruce自己就是个热爱肢体接触的人，所以当Tony第一次亲吻他，他脑中瞬间便凑出了Echo 12计划，只为让Tony接受自己对事后温存的种种念想。不过事实证明，想太多纯属浪费。当他从高潮中平复下来，Tony正伸长了四肢紧紧地圈住他，将头埋在他的颈窝中。</p>
+<p>“你好棒，”Tony呢喃道，手指从Bruce的发根梳过，“我要把整个世界都送给你。”</p>
+<p>Bruce笑道：“用不着这么恭维我，Tony。”</p>
+<p>Bruce能感觉到Tony噘起了嘴唇：“实话实说而已。”</p>
+<p>Bruce轻笑，扭头在Tony的鼻尖印下一吻。</p>
+<p>“你应该留下来，”Tony继续道，“不要撒丫子跑去也门。你在这儿的用处绝对更大。”</p>
+<p>“比如呢？给你暖床？”</p>
+<p>Tony翻了个白眼。</p>
+<p>Bruce忍俊不禁：“对，我知道。石油顶峰【注】、清洁能源，所有这些。但我们已经把方舟反应堆技术完善到了在经济上可行的程度，其余的交给市场就好。我在这儿还有什么用？”<br>【译注：1953年，美国地质学家哈伯特预言，美国石油生產速率将于60年代末至70年代初左右达到顶峰，达到了顶峰之后就会一直下降。这种情形叫做哈伯特顶点（Hubbert’s peak）或石油顶峰、油峰（Peak Oil）。石油頂峰的概念並不等同於石油枯竭。石油頂峰意指石油出產率(每年生產桶數)達到最高點，石油枯竭意指石油蘊藏量與供應下滑的現象。】</p>
+<p>“你在说笑？我们能提供可行的疟疾和艾滋病疗法；开展全民医疗保健工作；结束全球饥荒；改变社会结构让每个人都能获得良好而严肃的教育；也有望终结家庭暴力。”</p>
+<p>“所有这些……你打算怎么实现？”</p>
+<p>“是[b]我们[&#x2F;b]。我看了你的笔记。我知道你一直在进行疟疾和艾滋病的疗法开发工作。”</p>
+<p>“基因疗法的实时计算？那些只不过是怕自己手生，算着玩而已。非要我说的话，纯属异想天开。你不会真觉得我们能实现其中任何一项吧？”</p>
+<p>不过Tony却一言不发，这让Bruce不由得皱起双眉：“你是认真的。你要怎么做？法律障碍、大众对一切涉及到胚胎干细胞或基因替代疗法的恐慌、动物实验阶段……”</p>
+<p>“好吧，很高兴你问了。首先，因为油价已经渐渐成为人类的紧箍咒，我们只要推出廉价而高效的清洁能源就会立刻被国家当成救星。”</p>
+<p>“大众并不是总能看清什么对自己有益。”</p>
+<p>“显然。化石燃料工业会妄图抹黑，那么我就拥有了一大优势——我从会说话开始就一直在跟媒体对战。结果他们会关门大吉，而我将拥有前所未有的财富。所以这甚至都称不上是一场竞争。”</p>
+<p>“下一步，”Tony继续道，“是我们不动神色地收购所有干细胞研究专利。应该不会很难——眼下我就能做到。”</p>
+<p>“干细胞研究的主要障碍并不是专利。”</p>
+<p>“这就轮到SI律师团出手了。我们将推动干细胞研究的全面合法化。鉴于大部分国会议员其实都是靠我养着，好吧，可能只需要几天就成。”</p>
+<p>“唔，”Bruce皱眉，“美国的敏感话题。公然修改法律会有损你的形象。把操作转移到海外可能更容易。有了清洁能源这一大块，欧洲大部分地区同样会把你当作英雄。瑞典的医学研究法规相当宽松。当然，虽然伊朗也差不多，但我敢打赌所有石油国家到时候都会恨死你。”</p>
+<p>“好思路。就是瑞典了。”</p>
+<p>“当然你还是得对法律进行一些微调。我记得他们给人类胚胎试验设置了15天的期限。”</p>
+<p>“那都不算事儿。瑞典的政客也是人，和其他国家没什么不同。所以我们一旦把这些都安排好，你就能铺开对疟疾和艾滋病的治疗了。”</p>
+<p>“如果只能在瑞典工作，那得花上好多年。”</p>
+<p>Tony翻了个白眼：“你认真的？又不是你一个人孤军奋战。为了争取和我们一起从事尖端研究的机会，哪怕免费我都能网罗到大批顶尖研究员。不过我没这么无耻。我会给他们提供目前双倍的薪水。”</p>
+<p>“这么一来我应该能在1年内开发出经济上可行的疟疾疗法，艾滋病不超过3年。”</p>
+<p>“完美。第一个问题解决了。”</p>
+<p>“那其他的呢？全球饥荒？教育？”</p>
+<p>“好吧，那些要花的功夫可能会多点。不过你的笔记里并不只有艾滋病和疟疾，对吧？”</p>
+<p>“Tony，其他的我确实没想过[b]真[&#x2F;b]要实施。”</p>
+<p>“行，你刚才说是异想天开？那至少你想过。我一直都在跟你强调你只需要提出想法就好。现在看看你都写了些什么——富含维生素的抗涝作物？廉价而易操作的净水系统？抗癌疫苗？”</p>
+<p>“最后一项纯属幻想。”</p>
+<p>“你都已经完全理解了机制——剩下的只有计算而已。”</p>
+<p>“远超我们技术极限的计算——”</p>
+<p>“目前当然是极限。不过我们拥有世界一流的研究者和无限的资源，而且到那时我们已经让瑞典的经济翻番，他们不会蠢到妄图以政治或法律为借口封锁我们的试验渠道。”</p>
+<p>“如果我们真发布了那些东西那全世界人民都会想移民过去的。”</p>
+<p>“没错，他们的传统就是欢迎移民。不过我们一旦开始在瑞典的医院免费发放抗癌疫苗之类的药物，估计他们就不得不改变政策了。”</p>
+<p>“你会让世界其他地区同样拥有这些成果的，不是吗？”</p>
+<p>Tony耸肩：“最终的必然。我记得药物专利在那边只能保护8到9年？不过我也不是不能修改专利法，如果——”</p>
+<p>“我不认为有那样的必要。”</p>
+<p>“也是，那样反倒可能会拖让世界变得更美好的后腿。或者，也不一定。我是指，如果它能提高我们的影响力，而我们又确实是在做有益于世界的事……”</p>
+<p>“怎么对付饥荒？Tony。”Bruce打岔道，试图拉回他跑偏的思路，“饥荒可没法药到病除。”</p>
+<p>“抗涝且营养丰富的农作物能起到一些作用。”</p>
+<p>“总供应量从来都不成问题。食物一直都是够的——”</p>
+<p>“其余就只是资源分配的问题了，可以归结为线性规划【注】。”<br>【译注：二战期间为了解决人力、军费、粮食、资源等的计划和配置问题而逐渐形成的一门数学分支学科，后来进一步发展成为运筹学】</p>
+<p>“没错，只要你成为神一般的存在。”</p>
+<p>“Bruce，到时候我们已经同时控制了能源和制药两大行业，并且一直都在向全球大多数政府的高级官员支付咨询费。我们还买断了媒体。你凭什么会觉得我们不具备解决像是线性规划之类的问题的资源呢？</p>
+<p>Bruce翻了个身，和Tony面对面：“正解。那么我猜测教育也是能普及化的，只要你足够有钱。现在的网络讲座已经几乎都免费了。瓶颈在于阅卷和反馈。不过只要你能建立完善的系统并实施合理的激励制度，将会有足够多受过良好教育的人乐于进行有偿阅卷。”</p>
+<p>“正是如此。某些地区的大学毕业生失业率已经达到了顶峰，所以凭借我在薪酬上获得的人才资本指数，以及到时候砸进去的钱，我们的教育系统只需要花费几天时间编程，然后再有几个月的时间打开市场……”</p>
+<p>“就算你收买了所有瑞典人，其他政府也不会乐意你拥有那么高的影响力。”Bruce反对道。</p>
+<p>“是[b]我们[&#x2F;b]。”Tony纠正道。</p>
+<p>“他们会把我们包装成渴望权势的自大狂之类，然后派军队进攻。”</p>
+<p>“要么帮你把那个护盾做出来？”Tony问道。</p>
+<p>“什么？”</p>
+<p>“你的那个电磁护盾，造来……我不知道，防止Hulk伤害平民或者你脑子里的什么其他搞笑的念头。”</p>
+<p>“我都不知道你知道了。”</p>
+<p>“我不喜欢你为了对抗自己而造武器。不过如果你能用它来保护自己或者保护我们，这样的话，好吧。我的想法是，把它接到方舟反应堆上，只要经过适当放大，应该能覆盖一座城市甚至一个国家的空间。就让那些军队放马过来吧。”</p>
+<p>“护盾是给Hulk准备的。”</p>
+<p>“他可比大多数常规武器都厉害得多。”</p>
+<p>“那如果他们用核武器呢？”</p>
+<p>“他们会用核武器对付平民？”</p>
+<p>Bruce看了Tony一眼，准确地表达出[b]你是认真的[&#x2F;b]以及[b]你忘记那帮杂碎差点核平曼哈顿？[&#x2F;b]这两层含义</p>
+<p>“对，好吧。”Tony承认道，“不过你的护盾还只是个概念。没人比我更懂武器了。你知不知道我有一次还做出来过一种声波装置，能让人瘫痪20分钟而且不留后遗症？把它挂载到一个高功率扩音器上，然后，好吧……另外，真到了迫不得已的时候，我们总归还可以让JARVIS伸个懒腰。世界清静了。”</p>
+<p>“那你就会变成世界公敌？”</p>
+<p>“我不会。我们已经掌控了媒体，而且利用它获得了大众的支持。他们都明白不能和我们作对。不过万一要真没成，那好，我确实会。都是为了你，Bruce？全都是为了你。”</p>
+<p>“还是觉得希望渺小。哪怕有SHIELD站在我们这边。”Bruce叹道。</p>
+<p>“你觉得SHIELD会站在我们这边？”</p>
+<p>Bruce翻了个白眼：“当然啦。他们知道我们是唯一能看懂你写的那些面条式代码【注】——”<br>【译注：面条式代码（Spaghetti code），指一个代码的控制结构复杂、混乱而难以理解。程序的流向就像意大利面一样扭曲纠结。面条式代码的产生有许多原因，例如没有经验的程序员，及已经过长期频繁修改的复杂程序。结构化程序设计可避免面条式代码的出现。】</p>
+<p>“才[b]不[&#x2F;b]是面条式代码。我从没写过任何一段在我自己眼里不是一目了然的程序，哪怕是我又醉又嗨的时候！”</p>
+<p>“如果，仅有的能看懂的两个人同时也是彻底改写了科学的两个分支的人，并且其中一人还是亲眼看着另一人写下来的，这就叫面条式代码。”</p>
+<p>“爱死你承认自己有多才华横溢时的感觉了。”Tony笑道。</p>
+<p>Bruce回了他一个纵容的笑容：“不过没错，SHIELD会站在你这边。从Fury的角度而言，他要么得把宝压在技术衰败的旧世界上，然后在你把他的天空母舰当皮球踢的时候被钉上耻辱柱；要么可以欣然接纳通往未来的道路并且成为拯救和平与爱的新世界的英雄。”</p>
+<p>“你终于理解了。”Tony笑起来。</p>
+<p>“看来你对这个计划早就深思熟虑。”</p>
+<p>“我说过我要把整个世界都送给你。不属于我的东西怎么送？”</p>
+<p>“你知道的吧，我之前从没把那句话当真。”</p>
+<p>“你现在也没。”</p>
+<p>“我现在也没。”这是实话，因为无论发生什么，Bruce都信任Tony。对于自己、对于Hulk、对于世界。绝并不真是这种态度。</p>
+
+            </div>
+        
+        <footer class="article-footer">
+                
+                    <div class="article-meta2">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/cate/fiction/">₂ fiction</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/cate/fiction/fictrans/">翻译</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/cate/zqsg/">₃ zqsg</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/cate/zqsg/Marvel/">Marvel</a>
+    </div>
+
+                    </div>
+                        
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/marvel-fangshezu2-yy/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">
+                
+                    【放射组2】剧透
+                
+            </div>
+        </a>
+    
+    
+        <a href="/marvel-scibro-children/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">【科学组】我们的“孩子”/Our &#34;Kids&#34;</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+        <section id="comments"> 
+    <div id="disqus_thread">
+        <noscript>�迪��JavaScript���<a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">����</a></noscript>
+    </div>
+ </section>
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            JeanTse &copy; 2020 - 2022 <br>
+             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            <br>-----------------------------------------------------------
+            <br>本博客一切内容允许任何人用作非商业用途<br>包括允许扩写、改写、原文摘录等<br>标注来源即可
+            <br>-----------------------------------------------------------
+            
+                <br>本站访问人数：<span id="busuanzi_value_site_uv"></span>人
+                &nbsp;|&nbsp;
+                访问量：<span id="busuanzi_value_site_pv"></span>次
+            
+        </div>
+    </font>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://jeantse.net/marvel-scibro-Linear/';
+        
+        this.page.identifier = 'marvel-scibro-Linear';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'jeantsede-ge-ren-bo-ke' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

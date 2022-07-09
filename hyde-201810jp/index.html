@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>【hyde】2018 hyde live repo | JeanTse的个人博客</title>
+    
+    
+        <meta name="keywords" content="狗现场,hyde" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="于是在日本的网吧里，用Google在线输入写前半段的repo… 首先，一个人旅行就是爽！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【hyde】2018 hyde live repo">
+<meta property="og:url" content="https://jeantse.net/hyde-201810jp/">
+<meta property="og:site_name" content="JeanTse的个人博客">
+<meta property="og:description" content="于是在日本的网吧里，用Google在线输入写前半段的repo… 首先，一个人旅行就是爽！">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-10-05T11:39:05.000Z">
+<meta property="article:modified_time" content="2018-10-05T11:39:05.000Z">
+<meta property="article:author" content="JeanTse">
+<meta property="article:tag" content="狗现场">
+<meta property="article:tag" content="hyde">
+<meta name="twitter:card" content="summary">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/jt.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">JeanTse的个人博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/cate">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/timeline">归档</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar-hyde.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入搜索词" />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/cate">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/timeline">归档</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar-hyde.jpg" />
+            <h2 id="name">JeanTse</h2>
+            <h3 id="title"></h3>
+            
+            <a id="follow" target="_blank" href="mailto:jeantse@yeah.net">email to me</a>
+        </div>
+        <div class="article-info profile-block ">
+            <div class="article-info-block">
+                   <span>推荐链接</span>
+            </div>
+        </div>
+        
+        
+    <div class="profile-block social-links">
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://space.bilibili.com/783801">bilibili</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://jeantse.lofter.com/">LOFTER</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://archiveofourown.org/users/JeanTse">AO3</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://xbd.jeantse.net/">花甲学诗记</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://hcy.asia">華晨宇・非公式資料サイト</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+        
+        
+    </div>
+</aside>
+
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            ₁ 追星
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            hyde
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/hyde-fanletter/">【hyde】2018.5.黑弥撒，情书。</a></li>  <li class="file active"><a href="/hyde-201810jp/">【hyde】2018 hyde live repo</a></li>  <li class="file"><a href="/dream-2017-hyde/">【梦】2017.1.8 梦见Hyde及其全家</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            华晨宇
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/learn-videocut/">【学习】视频剪辑作业纪录</a></li>  <li class="file"><a href="/singer2020anti/">对《歌手：当打之年》开播后的职黑攻击的分析</a></li>  <li class="file"><a href="/hua-2018hunanlive/">2018湖南卫视元宵晚会舞美赞叹</a></li>  <li class="file"><a href="/hua-live-qingdao/">青岛凤凰音乐节历劫</a></li>  <li class="file"><a href="/hua-mrzz-hz/">花花在明日之子中对赫兹的态度分析</a></li>  <li class="file"><a href="/hua-myguide/">我找到了自己的专属向导</a></li>  <li class="file"><a href="/hua-shuixian/">【水仙】穿越至平行世界看自己的演唱会</a></li>  <li class="file"><a href="/hua-vranli/">给视觉系审美倾向者的华晨宇安利</a></li>  <li class="file"><a href="/singercd128kb/">分析湖南卫视制作歌手纪念CD用128k mp3做音源的迷操作内情</a></li>  <li class="file"><a href="/hua-loveworld/">《与火星的孩子对话》</a></li>  <li class="file"><a href="/hua-split-20191117/">绝响 - 《七重人格》海口首唱</a></li>  <li class="file"><a href="/hua-timeline/">鸟巢宣传视频创意</a></li>  <li class="file"><a href="/hua-shuixian-kegewanzong/">【水仙】对壳哥和丸总的脑补</a></li>  <li class="file"><a href="/hua-fakemonk/">《假行僧》 - 歌手2018</a></li>  <li class="file"><a href="/hua-huawei/">“花花听指挥！”</a></li>  <li class="file"><a href="/hua-shanhai/">《山海》 - 歌手2018</a></li>  <li class="file"><a href="/hua-toyaoshi/">刚认识花的第一天向yaoshi发泄</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            卷西
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/1111/">俩偶像儿子的拉郎</a></li>  <li class="file"><a href="/jesse-ifabook/">【卷西】假如卷老师是一本书，我的书评。</a></li>  <li class="file"><a href="/jessetransinterview/">【坑了】Vivarium访谈2020.4.2</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            墙头们
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/liuye-why/">【刘也】真香。</a></li>  <li class="file"><a href="/chaoyinzhanji/">潮音战纪</a></li>  <li class="file"><a href="/denglun-truefriend/">【邓伦】我的真朋友（无女主版）</a></li>  <li class="file"><a href="/shasiruai/">【蛋妞】《杀死汝爱》观后感</a></li>  <li class="file"><a href="/tobey3pyy/">【托比】托兰李三人角色拉郎YY</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            肖宇梁
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/moon-eva/">【肖宇梁 绫波丽】二(.5)次元天花板的相似性</a></li>  <li class="file"><a href="/moon-kitty/">【肖宇梁】《Kitty Kitty doesn't like ...》个人向混剪</a></li>  <li class="file"><a href="/dmbj-px-huaqing/">【瓶邪】《画情》无剧情混剪</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            闲得蛋痛
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/donttobepaparazzi/">RPS嗑学家：别让自己堕落成狗仔和私生</a></li>  <li class="file"><a href="/idolcareer/">为“偶像”职业正名</a></li>  <li class="file"><a href="/antireborn/">娱乐圈反重生文</a></li>  <li class="file"><a href="/mby/">论：明日之子毛不易是心机boy</a></li>  <li class="file"><a href="/nisu/">我为什么不反对泥塑</a></li>  <li class="file"><a href="/idoltime/">【坑了】流量经济下厂商与明星代言的博弈</a></li>  <li class="file"><a href="/chinaentertament/">对大陆娱乐圈现状的一些思考</a></li>  <li class="file"><a href="/idolcm/">对于明星代言的一些思考</a></li>  <li class="file"><a href="/tvbuy/">电视购物VS直播卖货</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₂ fiction
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            世界观
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/human-wenming/">人类文明，从个体文明至集群文明的跃迁？</a></li>  <li class="file"><a href="/original-zhongquan/">【坑】【大纲文】忠犬剧情YY</a></li>  <li class="file"><a href="/abo-2set/">【ABO】二设</a></li>  <li class="file"><a href="/aboantixy/">ABO世界观下的作者-读者对XY世界观的吐槽帖</a></li>  <li class="file"><a href="/abo-greenau/">【ABO】绿教AU</a></li>  <li class="file"><a href="/blavggameyy/">BL AVG 游戏大纲</a></li>  <li class="file"><a href="/chuzhongnaodong/">【初中时的脑洞】植物外星兄弟梗</a></li>  <li class="file"><a href="/humangene/">对于人类修饰基因组</a></li>  <li class="file"><a href="/xian-bl-yy/">修真文灵感，冰山冷漠攻，精英忠犬受</a></li>  <li class="file"><a href="/xian-nowoman-0/">男女生殖隔离的修仙设定－前传</a></li>  <li class="file"><a href="/xian-nowoman-1/">男女生殖隔离的修仙设定</a></li>  <li class="file"><a href="/xian-scigene/">关于修真和基因科技人类进化的设定</a></li>  <li class="file"><a href="/xianren-xiandai/">仙人眼中的现代世界</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            梦
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/dream-blgame/">【梦】BL+网游战斗剧情的梦？？</a></li>  <li class="file"><a href="/dream-shuqi/">【梦】一个新人漫画家在梦里与动漫角色NPC谈恋爱，回到现实世界结果扮演者是刚出道的舒淇，继续谈恋爱的故事？</a></li>  <li class="file"><a href="/dream-bro/">【梦】伪兄弟的梦！</a></li>  <li class="file"><a href="/dreamsweetbl/">【梦】有点忧伤但又甜蜜的BL文的梦</a></li>  <li class="file"><a href="/dream20190316/">【梦】2019.3.16</a></li>  <li class="file"><a href="/dream20190809/">【梦】2018.8.9</a></li>  <li class="file"><a href="/dream-dw/">【梦】2017.5.14 有点像DW的梦</a></li>  <li class="file"><a href="/jessespringdream/">【梦】2016.8.27 卷，春梦</a></li>  <li class="file"><a href="/dream-20150307/">【梦】2015.3.7</a></li>  <li class="file"><a href="/dream-201451-ABO/">【梦】 ABO背景，游戏相关</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            段子
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/darkhistory/">因果武器——黑历史消除器</a></li>  <li class="file"><a href="/3songs/">三首歌混搭毫无违和。</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            翻译
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/marvel-scibro-Linear/">【科学组】线性规划</a></li>  <li class="file"><a href="/marvel-scibro-children/">【科学组】我们的“孩子”/Our "Kids"</a></li>  <li class="file"><a href="/marvel-scibro-nostop/">【科学组】No Force in the Universe Can Stop Me</a></li>  <li class="file"><a href="/marvel-fangshezu1/">【放射组1】我们可能有放射性</a></li>  <li class="file"><a href="/marvel-scibro-lunwen/">【科学组】用于测量反向配对状态诱导下的构型转变的生物测定工具</a></li>  <li class="file"><a href="/marvel-fangshezu2/">【放射组2】让我们在黑暗中发光吧/Let's Glow in the Dark</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            跟风
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/384-liewangzhuan/">《列王传》假如，从一开始男主就是Gay会怎么样。</a></li>  <li class="file"><a href="/quanzhi-lian-bg/">以《连》为模板的BG恋爱设定</a></li>  <li class="file"><a href="/quanzhi-lunhui/">【轮回】方明华重生梗</a></li>  <li class="file"><a href="/quanzhi-xiaoxiang-admilk/">【肖翔】《AD钙奶》番外-孙翔的一天</a></li>  <li class="file"><a href="/quanzhi-xiaoxiang-bbs/">【肖翔】论坛体</a></li>  <li class="file"><a href="/quanzhi-xiaoxiang-yehao/">【叶皓联文】光源番外-肖时钦x孙翔</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-1/">【叶皓联文】番外-兴欣黑记者稿件</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-2/">【叶皓联文】光源番外 粉丝论坛罗生门</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-3/">【叶皓联文】ABO刘皓穿越原著世界</a></li>  <li class="file"><a href="/quanzhi-yehao-abo-4/">【叶皓联文】[树洞]起点反派炮灰突然变成我嫂子怎么办…</a></li>  <li class="file"><a href="/quanzhi-yehao-beloved/">【叶皓联文】《被爱妄想症》</a></li>  <li class="file"><a href="/yy-fudai/">【伏黛】做了一个自由度很高的背景设定</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₃ zqsg
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Marvel
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/fangshezu-tobey/">【放射组】托比蛛X博士的CP设定</a></li>  <li class="file"><a href="/marvel-HowardBucky/">【霍冬】片段联想</a></li>  <li class="file"><a href="/marvel-brucehulk/">【博士】Bruce-Hulk的理解</a></li>  <li class="file"><a href="/marvel-fangshezu2-yy/">【放射组2】剧透</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            TSN
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/jesse-bro-DanielxMike/">【卷西四兄弟】Daniel×Mike</a></li>  <li class="file"><a href="/jesse-bro-nolex/">【卷西四兄弟】(杰西BRO不带Lex玩)家族设定</a></li>  <li class="file"><a href="/jesse-nysm-hair/">【NYSM2】Atlas的发型</a></li>  <li class="file"><a href="/jewnicorn/">【TSN】【jewnicorn】莱总汤米拉郎</a></li>  <li class="file"><a href="/tsn-100qa/">【TSN】jewnicorn CP一百问</a></li>  <li class="file"><a href="/tsn-antism/">【TSN】【EM】反SM设定(梦)</a></li>  <li class="file"><a href="/tsn-bvs/">【TSN】莱总表示：我有特殊的拆CP技巧？</a></li>  <li class="file"><a href="/tsn-huastrong/">【TSN】花朵变强脑洞</a></li>  <li class="file"><a href="/tsn-change/">【TSN】花朵马总立场逆转设定</a></li>  <li class="file"><a href="/tsn-king/">【TSN】ME帝后比喻</a></li>  <li class="file"><a href="/tsn-lovenotfight/">【TSN】爱情不是博弈</a></li>  <li class="file"><a href="/tsn-lovetrade/">【TSN】爱情买卖-反同人脑洞</a></li>  <li class="file"><a href="/tsn-mark-reborn/">【TSN】Mark重生的大纲文</a></li>  <li class="file"><a href="/tsn-marryAU-mark/">【TSN】求婚大作战AU，Mark番外</a></li>  <li class="file"><a href="/tsn-read/">【TSN】剧本阅读设定</a></li>  <li class="file"><a href="/tsn-marryAU/">【TSN】求婚大作战AU，正文</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            全职高手
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/quanzhi-abo-1.0/">【伞修】ABO设定及大纲段子文 Version 1.0</a></li>  <li class="file"><a href="/quanhi-san/">【伞修】伞哥身世剖析</a></li>  <li class="file"><a href="/quanzhi-ending-lanhe/">【叶蓝】结局之后关于蓝河的种种想法</a></li>  <li class="file"><a href="/quanzhi-abo-2/">【伞修】全职ABO设定衍生的世界观补充</a></li>  <li class="file"><a href="/quanzhi-jiashi8diandangyy/">【伞修】嘉世八点档YY聊天记录（逆序）</a></li>  <li class="file"><a href="/quanzhi-qingming/">【伞修】清明节的玩笑</a></li>  <li class="file"><a href="/quanzhi-sanabofromxy/">【伞修】从男女世界穿越到ABO世界的伞哥…</a></li>  <li class="file"><a href="/quanzhi-sanxiu-heaven/">【伞修】伞哥死后执念建立虚构世界叶修少年养成计划梗</a></li>  <li class="file"><a href="/quanzhi-sanxiuyy/">【伞修】思路整理</a></li>  <li class="file"><a href="/quanzhi-yelan/">【叶蓝】架空设定大纲</a></li>  <li class="file"><a href="/quanzhi-yehao-shaoxiang-1/">【叶皓联文】【哨兵向导】叶皓-伞修-伞周</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            新平柯
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/conan-hattori/">【新平柯】服部少年のBL恋爱事件簿——原著纯粹解析论文</a></li>  <li class="file"><a href="/yy-conan/">【新平柯】设定和想法</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            毛骗
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/maopian-abo/">【毛骗】【庄宝】ABO设定</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₄ 技术宅
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/learn-hexo/">【安利】自建免费blog（安全仓库）</a></li>  <li class="file"><a href="/digitalmusic/">国内数字音乐主流音质考察</a></li>  <li class="file"><a href="/minigame/">各类益智小游戏推荐</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ₅ 生存确认
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/yiyuzheng/">漫谈抑郁症</a></li>  <li class="file"><a href="/quanzhifight/">反驳对全职的diss</a></li>  <li class="file"><a href="/earthonline/">可怜之人必有可恨之处。</a></li>  <li class="file"><a href="/replyAki/">给Aki的回信</a></li>  <li class="file"><a href="/jeantse/">名为JeanTse的人类</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/about/">关于本站</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-hyde-201810jp" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                    <div class="article-meta">
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/hyde/" rel="tag">hyde</a>, <a class="tag-link-link" href="/tags/live/" rel="tag">狗现场</a>
+    </div>
+
+                        
+                           <div class="article-meta3">
+                            点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
+                           </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            【hyde】2018 hyde live repo
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>于是在日本的网吧里，用Google在线输入写前半段的repo…</p>
+<p>首先，一个人旅行就是爽！</p>
+<span id="more"></span>
+<p>不用隐藏自己的胆怯和社恐，不用强行在选择恐惧症中飞快做出抉择。想矛盾多久就矛盾多久，想如何不理智都不用顾虑另一方的态度。</p>
+<p>不用强求算计出最合理的线路，最值得的衣食住行，最合理的购买力。</p>
+<p>就好象RPG角色加点，想要全速或全法也不用顾忌队友搭配。</p>
+<p>嗯，我就是会在奇怪的地方抠门省钱折腾自己，也就是会在奇怪的地方一掷千金。</p>
+<p>我会因为拒绝和司机交流而宁可提行李走几公里，也会愿意和小店老板侃一个小时。</p>
+<p>在鼓起勇气走进KTV和网吧之前我可以任由自己社恐发作在门外徘徊半个小时做心理建设，我知道我想去，但我也知道我没有那么快速能迈出脚步。我愿意等我自己。</p>
+<p>迷路的时候也不用因为丢人和误事而着急到出汗，没有人等我，也没有人催我。</p>
+<p>反正我第一次体会到任意行走的自由。</p>
+<p>也许其他所有人原本就是这样生活的，但总之我不是。</p>
+<hr>
+<p>29日，下午3点抵达名古屋。</p>
+<p>名古屋真的很小啊。。。。从机场到市中心也不过半个浦东。。。原本计划的乘车准备完全落空，什么一日券什么pass统统不适合。最后就如同第一次去杭州一样，靠双脚。</p>
+<p>雨中在名古屋站迷路了1小时，总之找到了旅馆，然后又走回名古屋站继续迷路，勘察地形，找所谓特色名店吃晚饭，但发现不知为何google地图就是不正常，亦或是我没用对，就没法区分高度上的各层，眼看着一个点在眼前但就是找不到。等我找到就已经过了营业时间……总之有些明白了重庆人的感受&#x3D; &#x3D;。</p>
+<p>踩点顺利，晚上继续习惯酒店以及日本人的细节习惯。</p>
+<hr>
+<p>30日，按照购物目标逛街。果然还是靠双脚……</p>
+<p>我是老年人生物钟，商场营业时间都太晚，而且各不相同。</p>
+<p>而最早开门的果然是animate……</p>
+<p>这原本并不在我的行程之内……我的计划做得相当正统：名古屋城、神社、电视塔……总之游客打卡景点加购物点。</p>
+<p>结果还是没忍住先就奔着昨晚路过的animate去了……我想这只是商场开门前的打发时间吧。</p>
+<p>进去了就差点没能出来。</p>
+<p>买了灌篮高手新版20集全。行李箱什么的暂时管不着了。买了总会有办法能带回去……不是吗……</p>
+<p>顺带还买了给小马和蝴蝶的礼物，外加给自己的包子新专辑。见到了总得买呀不是吗……谁叫我刚出的时候冷漠地没有买呢……</p>
+<p>然后因为要等下午3点酒店才能重新check in（多出来的一天是为了躲台风临时提前，所以虽然是同一家酒店但断档，10am－3pm）。于是打开老早就脑补过的银魂上映时间表，开心地发现仍有！而且就在名古屋站的商场影院！！</p>
+<p>但结果影院开了分院……又是一番迷路+问路（拎着20多本漫画。因为连自己也不确定后面的行程所以没法用locker），总之找到了。</p>
+<p>第一天逛街还没有克服心理障碍，不敢进（有人服务的和食）饭店，就在影院买了炸鱼块薯条可乐。好吃&gt;&lt;</p>
+<p>银魂真人版2好看到炸裂！！！吹爆戛纳最年轻影帝柳乐优弥！！！！</p>
+<p>以及吹爆日本影院的设备效果和观众的manner……怎么说呢，就是，会让你沉浸到从头至尾觉得这场电影是播放给你的专场。只有你自己一个人在看。</p>
+<p>看完电影考虑到这两天都没正经吃饭，发誓要赶在晚上台风登陆前大吃一顿。</p>
+<p>这两天走路反复经过而未入的几家眼馋的店——札幌蟹本家／门口大大肉字的烤肉店！！最后因为google评论说前者越来越坑游客所以选择了后者。</p>
+<p>于是发生了史上最尴尬一幕………详见微博。</p>
+<p>5000yen三人份的综合烤肉套餐+蔬菜烧烤+开胃前菜，我一人搞定。</p>
+<p>冒着逐渐剧烈的风雨回到酒店，泡温泉，开心。</p>
+<p>清行李，漫画直接把箱子塞满……开心又担心&#x3D;v</p>
+<hr>
+<hr>
+<p>1日。</p>
+<p>雨过天晴。按照最初的计划去了游客景点打卡！</p>
+<p>然后在名古屋城遇到超敬业的志愿讲解员老爷爷！其实，也是老爷爷让我真的迈出了克服语言障碍的第一步。感谢！</p>
+<p>至于景点本身……呃……作为日本最高统治者的行宫之一，真的，满村的。嗯。</p>
+<p>颇有种“脱裤看这？”的尴尬感。哪怕老爷爷讲解得再详细也……</p>
+<p>最后被老爷爷带到小树林学习建城地形原理，被蚊子咬了一身的包&gt;&lt;!!!</p>
+<p>对历史景点的失望让我放弃了继续游览神宫等其他历史景点的欲望。</p>
+<p>还是继续逛街吧。</p>
+<p>然后因为热情的老爷爷讲解太久而再次错过饭点……感谢便利店&gt;&lt;</p>
+<p>下午决定将购物清单解决完毕。</p>
+<p>综合前几天陆续踩点过的各大药妆店，不是这个缺货就是那个缺货，100%凑不到优惠金额，所以最终选择在货品最全的唐吉珂德一站搞定。</p>
+<p>期间差点犹豫买行李箱，结果最后还因此被理解错误的收银员分开结帐，然后被第二个收银员算术不清（或许是故意的）导致不得不多买了一样商品等于把折扣全抵消还超过……</p>
+<p>再往后，命运又让我看到了HMV……就，虽然没什么打算买的，但不进去看看就对不起自己！</p>
+<p>结果买了hyde的新刊杂志……</p>
+<p>再往后，命运又让我看到了book off……同上，于是又买了清春的绝版CD（300yen二手初回…）FakeStar，以及，一双50RMB的靴子+100多RMB的软质拖箱！！庆幸之前没买贵的行李箱～</p>
+<p>总算能把东西都塞进箱子里继续走。</p>
+<p>鉴于这两天都没能正经吃到日料，辛苦地找到商场顶楼餐饮区看起来很fashion的热门店，吃所谓名古屋特产之一的什么什么什么，结果又贵又难吃的一比&#x3D; </p>
+<hr>
+<p>失望而归。</p>
+<p>结果去sony店问ZX3手机，答曰全无上市规划。</p>
+<p>更失望，沮丧得连续搭错2趟巴士最后依然靠走的回了酒店……</p>
+<hr>
+<p>2日</p>
+<p>终于到了本番。</p>
+<p>上午就是不想闲着，也想磨合一下新靴子。于是找了个理由去帮老爹买礼物（渔具）。</p>
+<p>其实先去买了自己的隐形眼镜结果人家店铺都必须开处方……</p>
+<p>就是这里，店老板人很好，反正也没别的客人，介绍了很久，还怂恿我到底是给家里打了电话问过亲爹意见再买。</p>
+<p>但结果结账的时候我零钱算不清，对方主动提出帮我算，结果………我就总觉得多拿了我将近1k！事后记账总之就是对不上！！！</p>
+<p>算了，就当服务费了……叹气。</p>
+<p>哦，对，因为在渔具店聊太久错过饭店，日料店都关门。结果路过唯一开门的推门进去才发现是四川人开的中餐馆……尴尬但也开心，超美味的台湾炒饭+口水鸡！老板娘还给我加多了份量总算能吃到饱～（不愧是老乡就是慧眼识人）</p>
+<p>转票的姑娘有经验，在她的信息帮助下开场前才去买周边，不需要排队。</p>
+<p>反正一口气买买买了近4w周边，扭蛋6次全都没有重复很好运，夹娃娃机好歹中了1次也不算非……</p>
+<p>靴子真的脚痛膝盖痛！散场真的是瘸着走回去。。。</p>
+<p>而且这还是根本没怎么嗨起来的情况下&#x3D; &#x3D;。。。</p>
+<p>日本人真的有毛病。中间区域都TM不嗨。仿佛有肢体接触恐惧症。</p>
+<p>于是决定第二天必须前区。</p>
+<hr>
+<p>&#x3D;</p>
+<p>3日</p>
+<p>谁知道前区更坑………前面一团人不知道从哪里来的都特么站在原地嗨，前面空出一大块地盘也不往前移动，也不让后面的人往前移动。</p>
+<p>我真的太高了没有办法太欺负人，忍了。就一直很不爽。</p>
+<p>其实不影响观看，但影响气氛。</p>
+<p>就很不爽。</p>
+<p>整个人气成河豚。</p>
+<p>陷入抑郁气场。</p>
+<p>不想多说。</p>
+<p>但是！！开场前在Zepp附近的商场吃到的餐点是全行程最佳！！</p>
+<p>依旧是与我节拍彻底不合的日料不到饭点绝不开门，害我走了好多路还没吃到。结果只能去吃看起来人气最旺餐品也最好看的美食茶餐厅。推荐的最人气拼盘超美味！！！！然后！！！！！！终于见到了銀さん执着的パフィー！！就！！买了！！哪怕比之前的饭还贵也买了！！吃到反胃也在半个小时内拼命吃光了！！！！！！幸福到升天！！！</p>
+<hr>
+<p>4日</p>
+<p>就是今天啦～</p>
+<p>换回旅游鞋的我就是不死鸟。区区走路算什么～</p>
+<p>酒店退房寄存行李之后，终于达成了从09年129黑梦一夜复活开始就一直心心念念的日本KTV！</p>
+<p>哪怕joysound有进上海依然渴望！</p>
+<p>然后日本的确实效果好又爽&gt;&lt;我都没想到打分系统还真的可以很好玩～</p>
+<p>以及原版歌+超棒的音响真的能让自己唱功（表面上）提升……</p>
+<p>结果因为2小时3小时价格相同所以再次错过饭点&#x3D; &#x3D;</p>
+<p>勉强找到的水产店，随便点的推荐盖饭，果然还是超难吃还吃不饱……</p>
+<p>好在没有前两天那么贵到吐血，就……正常价格了。</p>
+<p>因为牢记前一天亲爹叮嘱的给妈妈买护肤品……不甘心买和我自己一样的（因为我的她都舍不得用）……硬是买了完全不了解的kanebo旗下品牌的&#x3D; &#x3D;……和Ba神侃一小时……全当体验了一把备受恭维的日式服务。总之钱花了就是要爽。</p>
+<p>但没想到唯独这家的免税不是现场，还得在机场办理……</p>
+<p>嗯，之前在地下商场迷路兜圈子时还偶遇了小音像店，虽然不如HMV种类多，但布置特别用心。买到了hyde新单曲以及和林老板合作的单曲……但结果送的特点都是动画的&#x3D; &#x3D;就……并不打算带回国去了。</p>
+<p>最后晚饭也在地下商场的超市饮食街解决，全是老年人……感觉应该靠谱。但结果，，，，终于吃到的名古屋名物鳗鱼饭，就，超级难吃……………还贵到吐血！！！！！！！！！！</p>
+<p>有点体会到外地人去上海吃到城隍庙小笼包的感受了………</p>
+<p>最后就是在做足了心理建设之后才来到的网吧啦！！！真的很爽啊，发现了最棒的用途是给手机内存做备份到one drive！！因为可以用USB！然后网速还快得一比！！！！！！！！</p>
+<p>不允许安装输入法也可以用google在线输入解决………</p>
+<p>唯一不习惯的是日式排序的键盘………但也只有符号不能盲打而已。</p>
+<p>舒心啊～～～～</p>
+<p>接下来就是期待已久的夜间巴士啦！</p>
+<hr>
+<p>其实关于酒店想单独写一段。</p>
+<p>真的超乎预料的舒适。</p>
+<p>就，小归小，但所有细节都完美。</p>
+<p>之前被我诟病的乡下庶民早餐，在吃过那么多难吃到贵死的日料之后发现真的超实惠了&gt;&lt;！！！</p>
+<p>更别提无限使用的温泉～～真的是拯救我live之后的双脚…………</p>
+<p>还有服务，我不知怎么弄丢了羽衣腰带也二话不说直接拿新的给我………是真的就默认不会有人偷这玩意儿，无论如何肯定是丢在酒店内部这样吧。</p>
+<p>然后找到免费水和冰块的机器之后也能随时喝到冷热水了～</p>
+<p>总之住了几天比自己家舒服（毕竟不用自己操心家务）……&#x3D;v&#x3D;……</p>
+<hr>
+<p>哦，对，忘记提某天逛街，狠心买了一堆昂贵水果（因为群里某些人都说日本水果好吃……）：贵的要死的树莓，价格适中的蓝莓，相当于国内进口价格的猕猴桃，还有国内我没吃到过好的的无花果。结果树莓蓝莓无花果都好吃，但猕猴桃大多没熟。。。我不得不一直带着。。。。超级重&gt;&lt;</p>
+<hr>
+<p>夜班巴士：</p>
+<p>形形色色的姑娘～～～不知道为啥大多是姑娘……也许日本只有这个年纪的女性才有这样的廉价旅行冲动吧……</p>
+<p>反正感觉就是为你一个人而开的专属巴士，完全不会受到其他人干扰。就跟电影院的manner一模一样………</p>
+<p>而我多花钱选在最后一排不但邻座无人，而且后靠时也无需顾虑后方……真的很值！</p>
+<p>然后就是中途进服务区休息……时间很长，条件很好，甚至来得及吃热食正餐。但……哪怕我拍了照也差点儿找不回巴士！真的超可怕的经历…………</p>
+<p>另外就是半夜脑子不清尝试了狐狸饭团，结果……居然TMD也是甜的…&#x3D; &#x3D;</p>
+<p>第二天衔接的USJ旅馆温泉……温泉是很棒啦，但行李寄存的服务真的白买了……标识的时间和温泉恰好错开……我也没敢去直接问…然后也不清楚附近locker的情况……硬是拖回旅店寄存……结果青旅TMD也还没开门&#x3D; &#x3D;！！幸好有早起的主妇旅客帮忙开门拿了进去……</p>
+<p>总之经验很重要。</p>
+<hr>
+<p>10.5 大阪游</p>
+<p>其实是临时在网上找的服部平次巡礼～</p>
+<p>在名古屋完全没坐地铁，大阪则全依赖地铁……地铁线路本身很发达也十分容易理解，但……就是所有地铁站入口出口都特么找不到…………………我在新今宫迷路快半小时就围绕着地图的那个点，却死活也找不到了之前下车的出入口…</p>
+<p>参观大阪天守阁让我想起滕王阁……咋说呢，同样到位的导览服务，但南昌你特么敢稍微不装修得那么土么？！！</p>
+<p>然后在天守阁，收到了L团圣诞live抽选结果～</p>
+<p>中了就去呗！</p>
+<p>以至于后面的行程完全无意了，草草在精力不集中导致的疯狂迷路中兜了一圈神社，通天塔只远远看了看。然后就回酒店了～</p>
+<p>青旅其实挺适合我的………当晚睡眠记录9小时……甚至因为直接睡倒而忘了吃药……</p>
+<p>怎么说呢，因为真的累+逛街任务全部达成吧，所以对纯旅游完全没兴趣的我在大阪整个就是精神恍惚。</p>
+<hr>
+<p>10.6 终于到了最期待的演出，让我不惜多花近一万RMB改行程的万圣趴！</p>
+<p>不得不说，我是玩得渐入佳境。</p>
+<p>从最开始纯粹当作国内音乐节一样的枯燥排队，到得知区域位置完全看不见的跌入谷底……然后还有暴雨和对变装的恐慌放弃………</p>
+<p>就算是Hyde也没能让我的沮丧减少。</p>
+<p>毕竟“只有一小时就结束？！”才是最大的打击……</p>
+<p>不过期间与站身后的一家三口特别是小男孩kazuma kun不多不少聊了一阵，聊解苦闷。然而日本人的礼貌疏离真的是……令人心生不快。我只是在给自己打伞时顺便帮小朋友遮住，结果小朋友在聊天中表现出百分百的善意和天真，对于帮助却是在不断道谢的同时越躲越远，令我已经逐渐遮不到他，只剩尴尬。</p>
+<p>然而反倒是在live结束之后本着不浪费的心情游玩USJ，这样的无目的的轻松惬意在我人生中又是第一次。</p>
+<p>见到队伍就去排，见到零食就去吃，见到周边就去逛～也不纠结什么“我并未入过此圈”。</p>
+<p>渐渐越来越嗨，在体验过哈利波特城堡禁林之旅后终于摧毁了内心的那道门，义无反顾去了世界上最大的过山车。</p>
+<p>我终于恢复成了那个迷恋于加速度和离心力的我！</p>
+<p>晚上意犹未尽地围观了些许僵尸狂欢，也吃了简单的晚餐，逐渐学会了狂欢节的真谛。并不是真的害怕……只是如果不尖叫，也就失去了僵尸排队的意义。</p>
+<p>从USJ出来，想方设法找到了带有售票机的罗森，买了第二天的票。仿佛是命运安排的这样环环相扣的时间表。</p>
+<hr>
+<p>10.7</p>
+<p>今天有经验也做足了准备，收拾好行李轻装上阵。</p>
+<p>入园后首先直奔另一架过山车！</p>
+<p>日本人发明的这个“单人单独排队”大约真是为了给被游乐场情侣闪瞎的单身狗些许补偿！几乎都只需要一半的排队时间！</p>
+<p>比起前一天卖点在于头朝下和大的过山车………这架时时刻刻就在游乐场大门上方制造尖叫噪音的玩意儿更可怕……因为全是我苦手的直上直下！我……差点飙泪…………</p>
+<p>然后第二天的live……Hyde他穿了joker小丑装！！！！</p>
+<p>真的…幸好买票来了！！！！</p>
+<p>第一天因为下雨因为种种，Hyde也只是试探………而第二天中午彻底放开！！我……我也终于切实被带入了狂欢节的热浪！</p>
+<p>因为票买太晚只能在最后，但反而是上坡一览无余，且有建筑物遮阳，观看体验爽到爆！</p>
+<p>直到现在返程飞机快落地…我脑海中依旧loop着“lalalalalalalala Halloween Party~”</p>
+<p>终于可以有一次我说，我是真的看了一场猪的live！</p>
+<hr>
+<p>PS：最大收获是终于习惯了用电动马桶圈………这玩意儿确实有毒(๑´ڡ&#96;๑)</p>
+
+            </div>
+        
+        <footer class="article-footer">
+                
+                    <div class="article-meta2">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/cate/idol/">₁ 追星</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/cate/idol/hyde/">hyde</a>
+    </div>
+
+                    </div>
+                        
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/dream20190316/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">
+                
+                    【梦】2019.3.16
+                
+            </div>
+        </a>
+    
+    
+        <a href="/hua-timeline/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">鸟巢宣传视频创意</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+        <section id="comments"> 
+    <div id="disqus_thread">
+        <noscript>�迪��JavaScript���<a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">����</a></noscript>
+    </div>
+ </section>
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            JeanTse &copy; 2020 - 2022 <br>
+             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            <br>-----------------------------------------------------------
+            <br>本博客一切内容允许任何人用作非商业用途<br>包括允许扩写、改写、原文摘录等<br>标注来源即可
+            <br>-----------------------------------------------------------
+            
+                <br>本站访问人数：<span id="busuanzi_value_site_uv"></span>人
+                &nbsp;|&nbsp;
+                访问量：<span id="busuanzi_value_site_pv"></span>次
+            
+        </div>
+    </font>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://jeantse.net/hyde-201810jp/';
+        
+        this.page.identifier = 'hyde-201810jp';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'jeantsede-ge-ren-bo-ke' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
