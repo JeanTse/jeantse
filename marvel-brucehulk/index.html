@@ -500,19 +500,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/marvel/" rel="tag">漫威</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -526,6 +531,7 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">本文目录</strong>
@@ -533,6 +539,7 @@
                 </div>
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h1 id="1，时间轴："><a href="#1，时间轴：" class="headerlink" title="1，时间轴："></a>1，时间轴：</h1><p>以08年无敌hulk电影为准？我并未仔细看。<br>在大学做研究，具有一定学术地位，至少28岁，更可能为35岁以上。<br>而女友尚未结婚，35岁并不为过，鉴于是接受Ross将军的政府工作安排，很可能是加入保密项目之后两人才相识相恋。<br>事故发生后，逃亡3～5年实属平常。<br>因此纽约之战时40岁上下均可行。</p>
 <h1 id="2，性格："><a href="#2，性格：" class="headerlink" title="2，性格："></a>2，性格：</h1><p>事故前：<br>刻意忘记幼年阴影，显示出天才科学家应有的自信，霸道，控制欲望与性感。<br>幼年阴影：<br>以软弱无助且误以为自身存在是错误的被洗脑的幼时自己为羞耻。<br>正因为天才所以幼时更容易为遭遇找出逻辑和理由，也就是洗脑比通常不记事的幼童更为严重。<br>尽管另一方面是被救出后治愈得也更迅速，但耻辱感也更重。</p>
@@ -543,6 +550,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -552,11 +560,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -581,6 +591,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

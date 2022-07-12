@@ -502,19 +502,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/TSN/" rel="tag">TSN</a>, <a class="tag-link-link" href="/tags/jewnicorn/" rel="tag">jewnicorn</a>, <a class="tag-link-link" href="/tags/outline/" rel="tag">大纲文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -528,8 +533,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>复制人制度的设立：</p>
 <p>最初是因为用于人体的器官移植和克隆技术的发展，加第三次世界大战（因为科技树与BVS完全不同，所以改掉二战设定）背景，大量非法移民进入美国，被卷入黑市器官交易。</p>
@@ -545,6 +552,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -554,11 +562,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -583,6 +593,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

@@ -502,19 +502,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/TSN/" rel="tag">TSN</a>, <a class="tag-link-link" href="/tags/jessebro/" rel="tag">卷西四兄弟</a>, <a class="tag-link-link" href="/tags/outline/" rel="tag">大纲文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -528,8 +533,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h1 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h1><p>剧情发生在NYSM1结束之后不久，暂且藏身在美国中西部，还未回归到纽约的Daniel，在住所被人敲门。从猫眼看出去被和自己长得几乎一模一样的Mike（24岁左右，大约就是TSN之后长卷发上节目戴眼镜比较知性成熟但又保留着依旧天真一面的卷形象）吓一跳。完全预料之外的发展以至于想不好该开口问什么的Daniel。Mike大约估计到对方警惕心很强（实则并非因为警惕心，而是Daniel了解并关注Mark的发展但对Mike无论怎么寻找（甚至在五人分开前向Dylan提过借助FBI系统信息 ）都无下落，因此有种本能的惊吓）所以掏出小本本低头快速写了一行字撕下来贴到猫眼前给Daniel看：“我是你的弟弟Mike”。</p>
 <h1 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h1><p>开门了的Daniel说我知道你是Mike。但是…你是怎么找到这里来的？（此时依然没有放他进门，只是开了半扇门对话，而且此时Daniel震惊过后已经能够抓住问题脉络）。Mike用那种他所特有的专注单纯的眼神盯着Daniel看。Daniel看出来Mike的紧张紧绷，下意识地随手用恰好在身上带着的小道具变了一个魔术吸引Mike视线。Mike看完，傻愣愣地犹犹豫豫伸手从Daniel袖口里揪出隐藏的道具，然后还抬头看一眼Daniel好像在问“我答对了吗？求表扬！”的小狗狗。</p>
@@ -559,6 +566,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -568,11 +576,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -597,6 +607,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

@@ -501,19 +501,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/TSN/" rel="tag">TSN</a>, <a class="tag-link-link" href="/tags/outline/" rel="tag">大纲文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -527,8 +532,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h2 id="和好友聊天的大纲记录"><a href="#和好友聊天的大纲记录" class="headerlink" title="和好友聊天的大纲记录"></a>和好友聊天的大纲记录</h2><h3 id="EneAkia"><a href="#EneAkia" class="headerlink" title="EneAkia"></a>EneAkia</h3><p>话说看演员编剧版的评论音轨有一个脑洞<br>加菲不是最开始为马总的角色准备了两三个星期嘛<br>弹幕里吐槽要是加菲演马总，那肯定特别软，说不定还得哭</p>
 <h3 id="EneAkia-1"><a href="#EneAkia-1" class="headerlink" title="EneAkia"></a>EneAkia</h3><p>于是想，如果是加菲&#x2F;花朵遇到了马克的选择，马克遇到了花朵的人生选择，会如何，其他角色也可以交换<br>可以设定一个东西，交换人生啥的，然后走一半走崩了可以重来</p>
@@ -544,6 +551,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -553,11 +561,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -582,6 +592,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

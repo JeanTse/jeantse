@@ -499,14 +499,19 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -520,8 +525,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h1 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h1><p>通过修真改变了人类基因的仙人已经不算人类，属于进化后的新物种，类似人类看猴子，所以他们也不把凡人当人。刻意欺压当然没有，但社会完全隔离，偶尔去凡人界工作也就是带一些体质合适的凡人回去做实验和做工作之类，也有在凡人界专门圈养的家族，能不断提供优质人才。<span id="more"></span></p>
 <h1 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h1><p>有资质的凡人当然也能修真。但一 方面是体质起点太低(仙人出身就是已经被改造过基因的体质，这种体质当然也是一代代积累进化而来，或者通过药物手术改造的，不是一个凡人在有生之年就能靠自己的能力修炼出来的)，同时也是没有资源。</p>
@@ -538,6 +545,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -547,11 +555,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -576,6 +586,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

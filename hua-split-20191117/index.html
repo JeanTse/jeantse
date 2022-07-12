@@ -500,19 +500,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/hua/" rel="tag">华晨宇</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -526,8 +531,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>就好像在发明文字之前，人类无法记录历史，所以丢失了那些文明。<br>就好像在相机发明之前，人类无法还原相貌，所以留下诸多异闻怪谈。<br>就好像在电影发明之前，人类对视觉艺术的表达仅限于二维。<br>而在数字世界全息模拟真正从网络小说落实到现实之前，我都无发让你们明白今晚发生了什么。<br>视频不可以。<br>音频不可以。<br>哪怕是充满无穷想象空间的文字亦不可以。</p>
 <p>至于看过任何官方或非官方的拍摄然后自以为了悟的人，我怜悯你。</p>
@@ -535,6 +542,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -544,11 +552,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -573,6 +583,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

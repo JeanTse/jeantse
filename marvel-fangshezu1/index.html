@@ -504,19 +504,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/anli/" rel="tag">安利</a>, <a class="tag-link-link" href="/tags/radiobro/" rel="tag">放射组</a>, <a class="tag-link-link" href="/tags/end/" rel="tag">正经写完的文</a>, <a class="tag-link-link" href="/tags/marvel/" rel="tag">漫威</a>, <a class="tag-link-link" href="/tags/trans/" rel="tag">翻译</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -530,6 +535,7 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">本文目录</strong>
@@ -537,6 +543,7 @@
                 </div>
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>Summary<br>Peter错过了与复仇者们站在同一阵线拯救世界的机会，但他尚未出局。而当他攀爬史塔克大厦以期能遇见Tony（亦或能在队伍中拥有一席之地）时，遇见的却是暂居于此以便继续其Hulk研究的Bruce。两人因科学而结缘，但Bruce的情感乾旱期，Peter的青春期荷尔蒙，以及双方悬而未决的秘密身份，迅速将一切搅成一团乱麻。<br>Notes<br>原作者note：<br>为LJ的Marvel Bang 2012而写，合作画手Korilian！她的作品见此：<a target="_blank" rel="noopener" href="http://korilian.livejournal.com/95546.html%E3%80%82%E4%B8%BB%E8%A6%81%E6%84%9F%E8%B0%A2%E6%88%91%E7%9A%84%E6%A0%A1%E5%AF%B9%EF%BC%9ATK%E3%80%82%E6%AC%A2%E8%BF%8E%E5%90%84%E7%A7%8D%E8%AF%84%E8%AE%BA%EF%BC%8C%E5%8D%81%E5%88%86%E6%84%9F%E8%B0%A2%E3%80%82">http://korilian.livejournal.com/95546.html。主要感谢我的校对：TK。欢迎各种评论，十分感谢。</a><br>另外关于分级和Tag预警，Bruce有一多半篇幅都没意识到Peter到底有多年少，所以某种程度算dub-con（译注：半-非自愿性行为，比如某一方对于是否应该做下去尚无明确想法但半推半就地从了）。<br>而且我也没法保证我在使用科学术语方面的准确性，只能提前向拥有一定化学&#x2F;蜘蛛生物学知识的读者们道歉了。</p>
 <span id="more"></span>
@@ -640,6 +647,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -649,11 +657,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -678,6 +688,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

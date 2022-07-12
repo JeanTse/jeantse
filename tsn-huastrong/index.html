@@ -501,19 +501,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/TSN/" rel="tag">TSN</a>, <a class="tag-link-link" href="/tags/outline/" rel="tag">大纲文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -527,8 +532,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>摔电脑之后，花朵找某人倾诉咨询。某人问他是想要挽回感情，还是只想要拯救被公开处刑的自尊？</p>
 <p>如果挽回感情，他也没啥好办法，因为性格什么的就算为对方而改变自己也会活得不开心的。不过如果只是拯救自尊，那很简单，努力变强到某方面压制马总，昭告众人你支持他建立FB只是给他面子，你不需要依靠他同样能获得成功。</p>
@@ -553,6 +560,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -562,11 +570,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -591,6 +601,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

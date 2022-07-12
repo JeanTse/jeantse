@@ -503,19 +503,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/abo/" rel="tag">abo</a>, <a class="tag-link-link" href="/tags/quanzhi/" rel="tag">全职高手</a>, <a class="tag-link-link" href="/tags/yehao/" rel="tag">叶皓</a>, <a class="tag-link-link" href="/tags/outline/" rel="tag">大纲文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -529,14 +534,17 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>昨天我回复评论时还突然觉得可以写一个兴欣黑那谁来着名字记不清了的新闻稿，就是讽刺叶修自我炒作甚至当年是不是借用A的身份强制潜规则标记刘皓O所以才导致嘉世分裂（而且本文设定和原著不同，在雷霆的刘皓确实努力至少在嘉世倒闭前都很好人缘），刘皓好不容易逃离嘉世结果叶修又乘机炒作逼迫刘皓跟自己结婚甚至不顾刘皓前途强制怀孕什么的………（听起来还相当合理？？）……刘皓本来想发声明打对方脸（说我坏话可以说老公坏话去死！！）但叶修说就算你声明对方只会更叫嚣是叶修指使，不用理睬就行。于是刘皓只能继续开MJ去骂…</p>
 
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -546,11 +554,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -575,6 +585,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

@@ -499,14 +499,19 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -520,8 +525,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h1 id="本站介绍"><a href="#本站介绍" class="headerlink" title="本站介绍"></a>本站介绍</h1><p>微博在2018年就被炸号了。<br>lofter被删的七七八八了。<br>10年前看中的wiznote谁TM也预料不到被卖掉然后半死不活了。<br>AO3一直在墙外，lucifer也被举报，昆仑早多少年也坍塌。<br>于是真的就只能自力更生了。</p>
 <p>反正我的脑力产出，能公开的都存在这儿了。暂时先慢慢搬家吧。<br>包括平时开的脑洞，半吊子大纲，设定癖做的世界观，自以为是的论文分析，出于兴趣的翻译，等等。</p>
@@ -531,6 +538,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         &nbsp;
@@ -540,6 +548,7 @@
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -559,6 +568,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

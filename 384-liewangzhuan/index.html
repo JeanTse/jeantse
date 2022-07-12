@@ -500,19 +500,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/outline/" rel="tag">大纲文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -526,8 +531,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>参军之后发现自己是gay，王子因为一直有参与皇室社交活动所以是那种会被评为gay圈男神的那种意淫对象…类似于直男也会脑补美貌病弱的白莲花公主啦。然后因为王子参军还引起过军人的小骚动之类的，不过军队里类似美国的三不政策，gay也不敢出柜的。</p>
 <p>男主拯救王子的时候对方是脸上包住了所以没认出来嘛，救完之后发现是王子，男主其实有小激动过，不过他很纯良朴实嘛也没多想什么就参加宴会了。宴会前被王子鄙视嘲讽，他有种男神幻灭的感觉，但同时也被王子的嘲弄搞得有点自卑（原片因为不牵涉性欲爱情所以男主对王子比较不卑不亢，而对公主因为两情相悦所以也不卑不亢），郁闷之下弹钢琴抒发感情被公主听见，友好交谈。后来国王问他要什么，他不由自主看向王子，结果王子公主离得近被国王误解，于是尴尬地和公主跳舞而且被公主追求</p>
@@ -538,6 +545,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -547,11 +555,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -576,6 +586,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

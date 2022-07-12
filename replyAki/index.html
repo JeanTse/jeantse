@@ -499,14 +499,19 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -520,8 +525,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>收到情书的惊喜，以及对于你的坦诚和热诚有种无地自容的汗颜&#x3D;v&#x3D;。</p>
 <p>对于分歧 ，大约因为我强迫自己对别人观点的宽容以至于养成了不对分歧进行“求同”，而是放弃性的容忍一切“存异”的习惯。从避免争执的角度而言是没问题，但面对你的真诚就会让我觉得自己很市侩…………包括很多次围观别人撕逼而自己有想法但是懒得&#x2F;害怕&#x2F;逃避表达之类的，总之大约和年龄有关，就是那种很想辩白一句“我当年也很投入的啊只不过现在觉得不管怎么挣扎都充满无力感所以掩耳盗铃了”，但其实这么辩白也只是找理由啦。</p>
@@ -538,6 +545,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -547,11 +555,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -576,6 +586,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

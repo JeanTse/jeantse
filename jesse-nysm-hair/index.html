@@ -501,19 +501,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/TSN/" rel="tag">TSN</a>, <a class="tag-link-link" href="/tags/end/" rel="tag">正经写完的文</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -527,8 +532,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h1 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h1><p>5人决定分头躲藏后，丹哥设定好了自己的新身份。利用灯下黑的盲点，依然混魔术圈，作为刚入行新人，崇拜J.Danniel.Atlas，在剧院打工搞灯光杂物道具什么的，身份为离家出走(?)富二代，所以住所和生活档次都比较高，掩饰不明来源巨额财富。唯一的漏洞就是必须将外表做最大改变，以令人不会与四骑士Atlas联想在一起。</p>
 <h1 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h1><p>造型还不能在正常理发店做，避免泄密。丹哥想的是，剪头发&#x3D;中国人。于是在唐人街看准一家隐蔽，但年代挺久的小理发店，员工和客人大多是非正规渠道移民或尚在读语言学校的穷学生打工仔，尚未融入美国主流社会，存在语言障碍，对演艺圈不敏感，肯定不知道出现在社会版比娱乐版更频繁的四骑士（更何况Atlas还是男的不是美女）。</p>
@@ -542,6 +549,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -551,11 +559,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -580,6 +590,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

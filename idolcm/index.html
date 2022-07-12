@@ -500,19 +500,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/idol/" rel="tag">娱乐圈</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -526,8 +531,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>你的父母去做保险销售，于是亲戚朋友都给面子买他的保险。因为亲友众多所以销售量一直都还可以。但因为他不是长袖善舞的那种人才，所以对于陌生人的业务开拓做的并不好。</p>
 <p>没做多久换了家公司，自然是要带着以往的客户关系网去面试。可是这家公司就提出质疑了：你以往的大订单基本都是亲友捧场买的，说到底跟传销没太大区别啊……不能继续向外部拓展的话，对你长期的职业发展很不利啊。总有一天亲友会饱和，就算你不断认识新朋友，家里不断添丁进口也比不上我们业务拓展所需要的订单数量啊。</p>
@@ -547,6 +554,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -556,11 +564,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -585,6 +595,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

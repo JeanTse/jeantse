@@ -501,19 +501,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/abo/" rel="tag">abo</a>, <a class="tag-link-link" href="/tags/quanzhi/" rel="tag">全职高手</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -527,8 +532,10 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <p>体育馆，曾经试图区分专门的o专区，但被指控歧视，于是规定只有父母或已标记伴侣陪同可以坐在普通区，否则只能坐在o专区。o专区安装了紧急情况下喷洒抑制剂的装置，装置很贵，抑制剂也很贵，而且抑制剂是一次性的不能回收。（比如止汗喷雾剂，个人使用并不觉得太贵，但如果像消防栓一样喷满整个房间……开销就不是一点两点。）</p>
 <p>后来上座率下降，o为了能参加而必须多抢票多花钱，非粉丝坐在里面也打扰其他人看比赛气氛，更别提组织粉丝团o不能参加在工会的工作。虽然因为o人数少所以影响不大但在这个世界，o的权益组织很犀利，质问隔离A也能起到相同效果，为什么偏偏歧视o？被告上法庭，最终只好取消。</p>
@@ -536,6 +543,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -545,11 +553,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -574,6 +584,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     

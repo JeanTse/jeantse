@@ -501,19 +501,24 @@
         
             <header class="article-header">
                     <div class="article-meta">
+                       <!-- 左对齐显示标签  -->
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link-link" href="/tags/radiobro/" rel="tag">放射组</a>, <a class="tag-link-link" href="/tags/marvel/" rel="tag">漫威</a>
     </div>
 
+                       <!-- 如果不是目录页（而是post全文页），则显示计数器  -->
+                      
                         
                            <div class="article-meta3">
                             点击量：<span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span> 
-                           </div>
+                           </div>   
+                       <!-- else，如果是目录页，则只用1空行占位 -->
                         
+                      
                     </div>
-                
+               <!-- 这是文章标题 -->
                 
     
         <h1 class="article-title" itemprop="name">
@@ -527,6 +532,7 @@
         <div class="article-entry" itemprop="articleBody">
         
         
+               <!-- TOC目录 -->
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">本文目录</strong>
@@ -534,6 +540,7 @@
                 </div>
             
         
+               <!-- 判断是直接显示全文，还是仅显示摘录+“点开全文” -->
         
             <h1 id="1、时间轴"><a href="#1、时间轴" class="headerlink" title="1、时间轴"></a>1、时间轴</h1><p><code>（以Peter高三参观时被咬为起点）</code></p>
 <p>蛛：18岁，高三，成为蜘蛛侠，Ben叔死亡<br>博：35岁，秘密任职于军工研究所，和女友恋爱1年多，发生事故，假死</p>
@@ -551,6 +558,7 @@
             </div>
         
         <footer class="article-footer">
+               <!-- 如果是文章页，则在页尾左对齐显示所属分类 -->
                 
                     <div class="article-meta2">
                         
@@ -560,11 +568,13 @@
     </div>
 
                     </div>
+               <!-- 非文章页（功能页，比如标签和分类），则仅用1空行占位 -->
                         
         </footer>
     </div>
 </article>
 
+<!-- 非目录页（文章页）底部显示上一篇/下一篇 -->
 
     
 <nav id="article-nav">
@@ -589,6 +599,7 @@
 
 
 
+<!-- 非目录页（文章页）底部显示评论框 -->
 
     
     
