@@ -1860,6 +1860,17 @@ ol.toc {
 .tagcloud a:before {
   content: "#";
 }
+.tagcloud2 a {
+  color: #333;
+  display: inline-block;
+  margin-right: 10px;
+}
+.tagcloud2 a:before {
+  content: "#";
+}
+.tagcloud2 a:hover {
+  color: #f00;
+}
 .widget-wrap {
   margin: 20px 0 20px 0;
   color: #333;
