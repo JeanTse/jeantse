@@ -1889,11 +1889,6 @@ ol.toc {
   border: 1px solid #42b983;
   border-radius: 4px 4px 0 0;
 }
-.widget-wrap h3 a {
-  margin-top: 5px;
-  float: right;
-}
-.widget-wrap h3 a,
 .widget-wrap h3 span {
   border-radius: 4px 4px 0 0;
   background: #f6f7f9;
@@ -1903,38 +1898,16 @@ ol.toc {
   padding: 5px 10px;
   vertical-align: bottom;
 }
-.widget-wrap h3 a i,
+.widget-wrap h3 span a {
+  color: #2a2935;
+}
+.widget-wrap h3 span a:hover {
+  color: #f00;
+}
 .widget-wrap h3 span i {
   font-size: 20px;
   vertical-align: bottom;
-}
-.widget-wrap h4 {
-  line-height: 20px;
-  background: #ffeaea;
-  margin: -21px -21px 10px -21px;
-  padding: 0 20px 0 20px;
-  line-height: 30px;
-  border: 1px solid #42b983;
-  border-radius: 4px 4px 0 0;
-}
-.widget-wrap h4 a {
-  margin-top: 5px;
-  float: right;
-}
-.widget-wrap h4 a,
-.widget-wrap h4 span {
-  border-radius: 4px 4px 0 0;
-  background: #f6f7f9;
-  border: 1px solid #42b983;
-  font-size: 15px;
-  line-height: 18px;
-  padding: 5px 10px;
-  vertical-align: bottom;
-}
-.widget-wrap h4 a i,
-.widget-wrap h4 span i {
-  font-size: 20px;
-  vertical-align: bottom;
+  color: #f00;
 }
 .widget-title {
   margin-bottom: 0;
