@@ -1495,6 +1495,9 @@ ol.toc {
 .layout-title .archive-year:hover {
   color: #f00;
 }
+.layout-wrap-inner {
+  text-align: justify;
+}
 @media screen and (max-width: 559px) {
   .layout-wrap-inner {
     padding: 0 0;
@@ -1863,7 +1866,7 @@ ol.toc {
 .tagcloud2 a {
   color: #333;
   display: inline-block;
-  margin: 2px 0 2px 2px;
+  margin: 1.5px;
 }
 .tagcloud2 a:hover {
   color: #f00;
@@ -1875,6 +1878,7 @@ ol.toc {
   border: 4px solid #42b983;
   border-radius: 4px;
   padding: 20px 20px 10px 20px;
+  text-align: justify;
 }
 .widget-wrap h3 {
   line-height: 20px;
