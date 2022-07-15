@@ -1632,7 +1632,7 @@ ol.toc {
 }
 .layout-wrap-inner.tag-cloud {
   margin-bottom: 15px;
-  padding: 25px;
+  padding: 0 25px;
   line-height: 2.5em;
 }
 .layout-wrap-inner.tag-cloud a {
@@ -1863,10 +1863,7 @@ ol.toc {
 .tagcloud2 a {
   color: #333;
   display: inline-block;
-  margin-right: 10px;
-}
-.tagcloud2 a:before {
-  content: "#";
+  margin: 2px 0 2px 2px;
 }
 .tagcloud2 a:hover {
   color: #f00;
@@ -1883,7 +1880,7 @@ ol.toc {
   line-height: 20px;
   background: #ffeaea;
   margin: -21px -21px 10px -21px;
-  padding: 0 20px;
+  padding: 0 20px 0 20px;
   line-height: 30px;
   border: 1px solid #42b983;
   border-radius: 4px 4px 0 0;
@@ -1904,6 +1901,34 @@ ol.toc {
 }
 .widget-wrap h3 a i,
 .widget-wrap h3 span i {
+  font-size: 20px;
+  vertical-align: bottom;
+}
+.widget-wrap h4 {
+  line-height: 20px;
+  background: #ffeaea;
+  margin: -21px -21px 10px -21px;
+  padding: 0 20px 0 20px;
+  line-height: 30px;
+  border: 1px solid #42b983;
+  border-radius: 4px 4px 0 0;
+}
+.widget-wrap h4 a {
+  margin-top: 5px;
+  float: right;
+}
+.widget-wrap h4 a,
+.widget-wrap h4 span {
+  border-radius: 4px 4px 0 0;
+  background: #f6f7f9;
+  border: 1px solid #42b983;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 5px 10px;
+  vertical-align: bottom;
+}
+.widget-wrap h4 a i,
+.widget-wrap h4 span i {
   font-size: 20px;
   vertical-align: bottom;
 }
