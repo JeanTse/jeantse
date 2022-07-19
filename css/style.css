@@ -403,7 +403,7 @@ code {
   margin-top: -15px;
 }
 .header-sub {
-  border-top: 1px solid #dfe1e2;
+  border-top: 0px solid #dfe1e2;
 }
 .header-sub ul {
   margin: 0 15px;
@@ -554,7 +554,7 @@ code {
   -moz-appearance: textarea;
   appearance: textarea;
   padding: 0;
-  width: 200px;
+  width: 80px;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #2a2935;
@@ -605,9 +605,11 @@ code {
   clear: both;
 }
 #main-nav-mobile .menu .search-form-input {
+  margin: 9px 1px;
   display: none;
+  float: right;
   padding: 0 10px;
-  margin-right: 15px;
+  margin-right: 0px;
   height: 30px;
   line-height: 30px;
   border-radius: 15px;
