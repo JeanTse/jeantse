@@ -888,22 +888,6 @@ a.article-title:hover {
 div.article-meta3 {
   float: right;
 }
-div.article-meta-button {
-  float: right;
-  margin-right: 0;
-  margin-left: 10px;
-}
-div.article-meta-button a {
-  padding: 4px 8px;
-  margin: 2px 0;
-  font-size: 85%;
-  background: #555;
-  border-radius: 3px;
-  text-transform: none;
-}
-div.article-meta-button a:hover {
-  background: #333;
-}
 .article-inner .article-meta {
   line-height: 20px;
   background: #ffeaea;
