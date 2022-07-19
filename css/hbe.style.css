@@ -53,9 +53,9 @@
 	float: right;
 	padding: 0 1em;
 	width: 40%;
-	color: #696969;
+	color: red;
 	font-weight: bold;
-	font-size: 70.25%;
+	font-size: 50%;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	-webkit-touch-callout: none;
@@ -82,30 +82,28 @@
 
 /* hbe button in post page */
 .hbe-button {
-  width: 130px;
+  width: 100px;
   height: 40px;
-  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+  background: linear-gradient(to bottom, #ffeaea 20%, #ffb7b7 100%); /* W3C */
   border: none;
   border-radius: 5px;
   position: relative;
-  border-bottom: 4px solid #2b8bc6;
-  color: #fbfbfb;
+  border-bottom: 3px solid #42b983;
+  color: #2A2935;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
-  text-shadow: 1px 1px 1px rgba(0,0,0,.4);
   font-size: 15px;
   text-align: left;
-  text-indent: 5px;
-  box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+  text-indent: 7px;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,.2);
   cursor: pointer;
-
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
 }
 
 .hbe-button:active {
-  box-shadow: 0px 2px 0px 0px rgba(0,0,0,.2);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,.2);
   top: 1px;
 }
 
@@ -114,10 +112,10 @@
   width: 0;
   height: 0;
   display: block;
-  border-top: 20px solid #187dbc;
-  border-bottom: 20px solid #187dbc;
-  border-left: 16px solid transparent;
-  border-right: 20px solid #187dbc;
+  border-top: 20px solid #42b983;
+  border-bottom: 20px solid #42b983;
+  border-left: 17px solid transparent;
+  border-right: 15px solid #42b983;
   position: absolute;
   opacity: 0.6;
   right: 0;
@@ -136,7 +134,7 @@
 	background: transparent;
 	padding: 0.5em;
 	margin-bottom: 2em;
-	color: #f9f7f6;
+	color: #42b983;
 	z-index: 100;
 	opacity: 0;
 }
@@ -160,7 +158,7 @@
 
 .hbe-input-label-default::before {
 	height: 100%;
-	background: #666666;
+	background: #ffeaea;
 	top: 0;
 	-webkit-transform: translate3d(0, -100%, 0);
 	transform: translate3d(0, -100%, 0);
@@ -170,7 +168,7 @@
 
 .hbe-input-label-default::after {
 	height: 2px;
-	background: #666666;
+	background: #42b983;
 	top: 100%;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
@@ -213,7 +211,7 @@
 
 .hbe-input-field-default:focus + .hbe-input-label-default .hbe-input-label-content-default,
 .hbe-input--filled .hbe-input-label-default .hbe-input-label-content-default {
-	color: #555555;
+	color: red;
 	-webkit-transform: translate3d(0, 2.1em, 0) scale3d(0.65, 0.65, 1);
 	transform: translate3d(0, 2.1em, 0) scale3d(0.65, 0.65, 1);
 }
