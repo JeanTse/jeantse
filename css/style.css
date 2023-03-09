@@ -1388,7 +1388,7 @@ ol.toc {
 }
 #toc.toc-aside {
   display: none;
-  width: 13%;
+  width: 83%;
   position: fixed;
   right: 2%;
   top: 320px;
