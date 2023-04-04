@@ -25,8 +25,8 @@
     if (!!$.prototype.justifiedGallery) {  // if justifiedGallery method is defined
         var options = {
             rowHeight: 140,
-            margins: 4,
-            lastRow: 'justify'
+            margins: 2,
+            lastRow: 'center'
         };
         $('.justified-gallery').justifiedGallery(options);
     }
